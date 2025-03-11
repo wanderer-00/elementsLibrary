@@ -1,0 +1,16 @@
+/* Здесь описаны стили применимые к каждой странице сайта */
+
+*,
+*::after,
+*::before
+{box-sizing: border-box}
+
+html,
+body
+{font-family: sans-serif}
+
+.wrapper
+{
+    max-width: 800px;
+    margin: auto;
+}
