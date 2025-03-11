@@ -1,0 +1,110 @@
+:root {
+    --header-height: 50px;
+}
+
+header {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+header > .wrapper {}
+
+header > .wrapper > div {
+    height: var(--wheader-height);
+    justify-items: start;
+    align-items: center;
+    display: grid;
+    grid-gap: 0 50px;
+    grid-template-rows: calc(var(--header-height)/2) calc(var(--header-height)/2);
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-areas:
+    "heder_logo heder_mail heder_city heder_butn"
+    "heder_logo heder_tele heder_strt heder_butn"
+    ;
+}
+
+header .logo {grid-area: heder_logo}
+header .mail {grid-area: heder_mail}
+header .tele {grid-area: heder_tele}
+header .city {grid-area: heder_city}
+header .strt {grid-area: heder_strt}
+header .butn {grid-area: heder_butn}
+
+header .logo {
+    display: inline-flex;
+    height: 100%;
+    text-decoration: none;
+    color: var(--color-text);
+    
+}
+
+header .logo > .icon {
+    display: inline-flex;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../IMG/header/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+header .logo > .text {
+    font-size: 54px;
+    font-weight: bold;
+}
+
+/* Кнопка Войти */
+header .butn {
+    display: grid;
+}
+
+header > .wrapper > div > .butn > a
+{
+    aspect-ratio: 1/1;
+    text-align: center;
+    --butn-height: 60px;
+    height: var(--butn-height);
+    margin: calc( ( var(--header-height) - var(--butn-height) ) / 2 ) 0;
+    
+    &:hover
+    {
+        border-radius: 6px;
+        background-color: lightgray;
+    }
+}
+
+header .butn .icon
+{
+    fill: var(--color-text);
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+header .city {
+    font-size: 24px;
+}
+
+header .city > svg {
+    height: 20px;
+    fill: var(--main-color);
+}
+
+@media (orientation: portrait) {
+    header > .wrapper > div {
+        grid-gap: 0 20px;
+        grid-template-columns: auto auto 1fr auto;
+        grid-template-areas:
+        "heder_logo heder_mail heder_city heder_butn"
+        "heder_logo heder_tele heder_strt heder_butn"
+        ;
+    }
+    
+    header .city,
+    header .strt,
+    header .logo > .text
+    
+    {
+        display: none;
+    }
+}

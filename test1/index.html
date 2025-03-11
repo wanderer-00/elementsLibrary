@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="../css/0.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    :root {
+        --title: gray;
+        --padding: 20px;
+    }
+    
+    * {
+        font-family: sans-serif;
+    }
+    div.title {
+        font-family: sans-serif;
+        color: gray;
+        padding:  var(--padding) var(--padding) 0 var(--padding);
+    }
+    
+    p {
+        color: red;
+        margin: var(--padding);
+    }
+
+    div.box {
+        padding: var(--padding);
+        margin: var(--padding);
+        border: 1px solid lightgray;
+    }
+
+
+    /* plusMinus */
+    /* Конструкция */
+    /* Убрать кнопки увеличения и уменьшения в input number */
+    /* Chrome, Safari, Edge, Opera */
+    input.plusMinus::-webkit-outer-spin-button,
+    input.plusMinus::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input.plusMinus {
+        -moz-appearance: textfield;
+    }
+
+    /**************************************************/
+
+    /* Дизайн */
+    input.plusMinus {
+        width: 40px;
+        border: none;
+        padding: 4px;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    button {
+        background: none;
+        border: none;
+        font-size: 1.4em;
+        cursor: pointer;
+        font-family: monospace;
+    }
+
+    /* Размеры */
+    /* Убрать кнопки увеличения и уменьшения в input number */
+    /* Chrome, Safari, Edge, Opera */
+    input.size::-webkit-outer-spin-button,
+    input.size::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input.size {
+        -moz-appearance: textfield;
+    }
+
+    input.size {
+        width: 60px;
+        padding: 4px;
+        text-align: center;
+    }
+    
+    
+    hr {
+        margin: 20px 0;
+        border: 0;
+        border-bottom: 1px solid lightgray;
+    }
+    
+</style>
+
+<body>
+    <!---->
+    <div class="title"><b>Количество</b></div>
+    <p>❗ Нужно стилизовать красиво ползунок</p>
+    <div class="box">
+        <input type="range" >
+    </div>
+   
+    <!---->
+    <div class="title"><b>Количество</b></div>
+    <div class="box">
+        <div class="element_plusMinus">
+            <button onclick="minus()">-</button>
+            <input class="plusMinus" type="number" placeholder="кол-во" min="1" value="1">
+            <button onclick="plus()">+</button>
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="title"><b>Размеры</b></div>
+    <div class="box">
+        <div class="element_size">
+            <input class="size" type="number" placeholder="ширина">
+            <span>×</span>
+            <input class="size" type="number" placeholder="высота">
+        </div>
+    </div>
+
+
+    <!---->
+    <div class="title"><b>Цвета на выбор</b></div>
+    <div class="box">
+        <div class="element_color">
+            <div>
+                <input type="color" list="presetColors">
+                <datalist id="presetColors">
+                    <option>#ff0000</option>
+                    <option>#00ff00</option>
+                    <option>#0000ff</option>
+                </datalist>
+            </div>
+        </div>
+    </div>
+
+
+    <!---->
+    <link rel="stylesheet" href="CSS/checkbox_radio.css">
+    <style>
+        .checkbox_radio > div {display: flex}
+    </style>
+
+    <div class="title"><b>Кастомно стилизованные Radio и Checkbox</b></div>
+    <div class="box checkbox_radio no-select">
+        
+        <div>
+            <input type="radio" id="A1" name="A" checked>
+            <label for="A1">radio 1</label>
+
+            <input type="radio" id="A2" name="A">
+            <label for="A2">radio 2</label>
+
+            <input type="radio" id="A3" name="A">
+            <label for="A3">radio 3</label>
+
+            <input type="radio" id="A4" name="A">
+            <label for="A4">radio 4</label>
+        </div>
+        
+        <hr>
+        
+        <div>
+            <input id="B1" name="B" type="checkbox" checked>
+            <label for="B1">checkbox 1</label>
+
+            <input id="B2" name="B" type="checkbox" checked>
+            <label for="B2">checkbox 2</label>
+
+            <input id="B3" name="B" type="checkbox">
+            <label for="B3">checkbox 3</label>
+
+            <input id="B4" name="B" type="checkbox">
+            <label for="B4">checkbox 4</label>
+        </div>
+
+    </div>
+    
+    
+    <!-- Drag-and-drop -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="CSS/drag_and_drop.css">
+    <div class="title"><b>Drag-and-drop</b></div>
+    <div class="box">
+        <div class="drag_and_drop">
+            <input type="file">
+        </div>
+        <img src="img/ref.png" alt="">
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/plusMinus.js"></script>
+<script type="text/javascript" src="data/ORACAL 641.js"></script>
+<script type="text/javascript" src="js/color.js"></script>
+
+</html>

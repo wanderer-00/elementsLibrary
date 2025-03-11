@@ -1,0 +1,17 @@
+:root {
+    --drag_and_drop-width: 300px;
+}
+
+.drag_and_drop {
+    aspect-ratio: 1/1;
+    width: var(--drag_and_drop-width);
+    box-shadow: 0 0 8px 2px #DDD;
+    
+    & input[type=file] {
+        width: var(--drag_and_drop-width);
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+    }
+}
+

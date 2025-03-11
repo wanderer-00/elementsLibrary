@@ -1,0 +1,89 @@
+:root {
+    --disabled: gray;
+    --main-color: #333632;
+/*    --main-color: rgba(84, 58, 183, 1);*/
+    --color-background: #FFF;
+/*    --color-background: #121212;*/
+/*    --color-text: #FFF;*/
+    --color-text: #0D1B2A;
+    --padding-global: 30px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Scroll-bar */
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f9f9fd;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+
+a {color: var(--color-text)}
+
+html,
+body {
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background-color: var(--color-background);
+}
+
+.global_wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+header,
+main,
+footer {
+    padding: 0 20px;
+}
+
+
+/* Модификаторы */
+.no-wrap {white-space: nowrap}
+
+.no-select {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(120, 120, 120, 0.4);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(120, 120, 120, 0.4);
+    box-shadow: 0px 0px 8px 0px rgba(120, 120, 120, 0.4);
+}
+
+
+
+
+/* Мобильная версия */
+@media (orientation: portrait) {
+    .wrapper {width: 100%}
+    
+
+}

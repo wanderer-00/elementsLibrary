@@ -1,0 +1,21 @@
+/* Скрыть input (точки) radio и checkbox */
+input[type=radio],
+input[type=checkbox]{
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+@media (orientation: portrait) {
+    .wrapper {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* Заголовки полей */
+.title {
+    color: gray;
+    padding: 10px 0;
+}
