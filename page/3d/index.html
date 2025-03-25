@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/0.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper"></div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <h2>Проссмотр 3D моделей</h2>
+            <p>Лёгкая, настраеваемая библиотека для отрисовки 3D моделей</p>
+            <style>
+                model-viewer {
+                    width: 100%;
+                    height: 500px;
+                    margin: auto;
+                }
+            </style>
+            <!-- script -->
+            <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+            <!-- блок проссмотра -->
+            <model-viewer alt="описание" src="3D/modelviewer.dev/NeilArmstrong.glb" ar environment-image="3D/modelviewer.dev/moon_1k.hdr" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+            <a href="https://modelviewer.dev/">modelviewer.dev</a>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper"></div>
+    </footer>
+</body></html>
