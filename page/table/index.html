@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link rel="stylesheet" href="style/first.css">
+</head>
+<body>
+    <div class="poster">
+        <h1>Дизайн сложных таблиц</h1>
+        <a href="https://awdee.ru/complex-tables-design/">Источник</a>
+    </div>
+    <div class="wrapper">
+
+        <table id="firstTable" align="center" cellpadding="6">
+            <caption>Refresh 1 min later</caption>
+            <thead id="firstTable_head">
+                <tr>
+                    <th align="left">Company</th>
+                    <th align="right">Amount</th>
+                    <th align="right">Yield</th>
+                    <th align="right">Price</th>
+                    <th align="right">Duration</th>
+                    <th align="right">Spread</th>
+                    <th align="left">Date</th>
+                </tr>
+                <tr>
+                    <th align="left"></th>
+                    <th align="right">₽</th>
+                    <th align="right">%</th>
+                    <th align="right">%</th>
+                    <th align="right"></th>
+                    <th align="right">BPS</th>
+                    <th align="left"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+
+<!-- data base -->
+<script src="data/first.js"></script>
+<!-- ms ==> date -->
+<script src="script/dateConverter.js"></script>
+<!-- data insertion -->
+<script src="script/first.js"></script>
+
+</html>
