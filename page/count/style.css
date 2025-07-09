@@ -1,0 +1,22 @@
+input.count::-webkit-outer-spin-button,
+input.count::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input.count {
+    width: 60px;
+    border: none;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+button.count {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-family: monospace;
+}
