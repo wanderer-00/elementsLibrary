@@ -60,26 +60,6 @@
         font-family: monospace;
     }
 
-    /* Размеры */
-    /* Убрать кнопки увеличения и уменьшения в input number */
-    /* Chrome, Safari, Edge, Opera */
-    input.size::-webkit-outer-spin-button,
-    input.size::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    /* Firefox */
-    input.size {
-        -moz-appearance: textfield;
-    }
-
-    input.size {
-        width: 60px;
-        padding: 4px;
-        text-align: center;
-    }
-    
     
     hr {
         margin: 20px 0;
@@ -96,33 +76,6 @@
     <div class="box">
         <input type="range" >
     </div>
-   
-    <!---->
-    <div class="title"><b>Размеры</b></div>
-    <div class="box">
-        <div class="element_size">
-            <input class="size" type="number" placeholder="ширина">
-            <span>×</span>
-            <input class="size" type="number" placeholder="высота">
-        </div>
-    </div>
-
-
-    <!---->
-    <div class="title"><b>Цвета на выбор</b></div>
-    <div class="box">
-        <div class="element_color">
-            <div>
-                <input type="color" list="presetColors">
-                <datalist id="presetColors">
-                    <option>#ff0000</option>
-                    <option>#00ff00</option>
-                    <option>#0000ff</option>
-                </datalist>
-            </div>
-        </div>
-    </div>
-
 
     <!---->
     <link rel="stylesheet" href="CSS/checkbox_radio.css">

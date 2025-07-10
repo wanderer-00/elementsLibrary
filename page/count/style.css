@@ -1,8 +1,7 @@
 input.count::-webkit-outer-spin-button,
 input.count::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
+    /* удаление встроенных кнопок */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input.count {

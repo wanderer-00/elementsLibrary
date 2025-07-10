@@ -1,7 +1,7 @@
 var inputCount = document.getElementById('count');
 
 function plus() {
-    inputCount.value = parseInt(inputCount.value) + 1
+    inputCount.value = parseInt(inputCount.value) + 1;
 };
 
 function minus() {
