@@ -1,3 +1,7 @@
+:root {
+    --follow-color: #0078D7;
+}
+
 .push {
     list-style: none;
     font-family: sans-serif;
@@ -6,7 +10,6 @@
 .push li {
     position: relative;
     padding: 20px 0 20px 40px;
-    color: #D29D25;
     font-variant: small-caps;
     font-weight: bold;
     cursor: pointer;
@@ -35,7 +38,7 @@
 }
 
 .push li:hover:before {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, .2)
+    box-shadow: 0 0 0 10px var(--follow-color)
 }
 
 .push li:last-child:after {

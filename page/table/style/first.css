@@ -1,11 +1,3 @@
-.poster {
-    margin: auto;
-    width: 80%;
-}
-h1 {
-    font-size: 3rem;
-}
-
 @font-face {
     font-family: 'UbuntuMono'; /* Имя, которое вы будете использовать в HTML */
     src: url('../../font/UbuntuMono-Regular.ttf') format('ttf');

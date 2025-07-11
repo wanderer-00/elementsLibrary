@@ -14,20 +14,10 @@
 <body>
     <div class="wrapper">
         <h1>Колличество</h1>
-        <div class="after_before">
-            <div>После</div>
-            <div>До</div>
-
-            <div>
-                <button class="count" onclick="minus()">-</button>
-                <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
-                <button class="count" onclick="plus()">+</button>
-            </div>
-
-            <div>
-                <input id="count" type="number" placeholder="кол-во" min="1" value="1">
-            </div>
-        </div>
+        
+        <button class="count" onclick="minus()">-</button>
+        <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
+        <button class="count" onclick="plus()">+</button>
         
 <h2>HTML</h2>
 <pre><code class="language-html">&lt;button class=&quot;count&quot; onclick=&quot;minus()&quot;&gt;-&lt;/button&gt;
@@ -56,6 +46,22 @@ button.count {
     cursor: pointer;
     font-family: monospace;
 }</code></pre>
+    
+<h2>JS</h2>
+<pre><code class="language-js">var inputCount = document.getElementById('count');
+
+function plus() {
+    inputCount.value = parseInt(inputCount.value) + 1;
+};
+
+function minus() {
+    if(inputCount.value == 1){
+        alert('😡');
+    } else {
+        inputCount.value -= 1
+    }
+};
+</code></pre>
 
     </div>
 </body>
