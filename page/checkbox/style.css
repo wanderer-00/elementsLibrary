@@ -1,36 +1,37 @@
+:root {
+    --checkbox-on: #0078D7;
+    --checkbox-off: gray;
+}
+
 input[type="checkbox"]
 {
     display: none;
 }
 
-.no-select {
-    -webkit-user-select: none; /* Chrome/Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE/Edge */
-    user-select: none; /* Стандартный синтаксис */
-}
-
 input:checked + label {
-    color: blue;
-    border-color: blue;
+    color: var(--checkbox-on);
+    border-color: var(--checkbox-on);
 }
 
-.checkbox_radio > div {
+.checkbox {
     display: flex;
     grid-gap: 10px;
 }
 
-.checkbox_radio label {
-    --color: gray;
+.checkbox label {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
     
     display: block;
     padding: 12px;
     text-align: center;
     place-content: center;
     white-space: nowrap;
-    color: var(--color);
+    color: var(--checkbox-off);
     border-radius: 4px;
-    border: 1px solid var(--color);
+    border: 1px solid var(--checkbox-off);
     cursor: pointer;
     font-size: 1rem;
 }

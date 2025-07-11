@@ -3,26 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!-- global -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- local -->
     <link rel="stylesheet" href="style.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../../hightlight/styles/codepen-embed.min.css">
 </head>
 <body>
+    <div class="wrapper">
     <h1>Check Box</h1>
-    <div class="box checkbox_radio no-select">
-        
-        <div>
-            <input id="B1" name="B" type="checkbox">
-            <label for="B1">checkbox 1</label>
+    <div class="checkbox">
+        <input id="B1" name="B" type="checkbox">
+        <label for="B1">checkbox 1</label>
 
-            <input id="B2" name="B" type="checkbox" checked>
-            <label for="B2">checkbox 2</label>
+        <input id="B2" name="B" type="checkbox" checked>
+        <label for="B2">checkbox 2</label>
 
-            <input id="B3" name="B" type="checkbox">
-            <label for="B3">checkbox 3</label>
+        <input id="B3" name="B" type="checkbox">
+        <label for="B3">checkbox 3</label>
 
-            <input id="B4" name="B" type="checkbox">
-            <label for="B4">checkbox 4</label>
-        </div>
-
+        <input id="B4" name="B" type="checkbox">
+        <label for="B4">checkbox 4</label>
     </div>
+    
+<h2>HTML</h2>
+<pre><code class="language-html">&lt;input id=&quot;B1&quot; name=&quot;B&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;B1&quot;&gt;checkbox 1&lt;/label&gt;
+
+&lt;input id=&quot;B2&quot; name=&quot;B&quot; type=&quot;checkbox&quot; checked&gt;
+&lt;label for=&quot;B2&quot;&gt;checkbox 2&lt;/label&gt;
+
+&lt;input id=&quot;B3&quot; name=&quot;B&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;B3&quot;&gt;checkbox 3&lt;/label&gt;
+
+&lt;input id=&quot;B4&quot; name=&quot;B&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;B4&quot;&gt;checkbox 4&lt;/label&gt;</code></pre>
+
+<h2>CSS</h2>
+<pre><code class="language-css">:root {
+    --checkbox-on: #0078D7;
+    --checkbox-off: gray;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+
+input:checked + label {
+    color: var(--checkbox-on);
+    border-color: var(--checkbox-on);
+}
+
+.checkbox {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.checkbox label {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
+    
+    display: block;
+    padding: 12px;
+    text-align: center;
+    place-content: center;
+    white-space: nowrap;
+    color: var(--checkbox-off);
+    border-radius: 4px;
+    border: 1px solid var(--checkbox-off);
+    cursor: pointer;
+    font-size: 1rem;
+}</code></pre>
+
+</div>
+
 </body>
+
+<!-- highlight -->
+<script src="../../hightlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
 </html>
