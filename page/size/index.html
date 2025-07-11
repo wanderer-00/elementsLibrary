@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Size</title>
+    <!-- global style -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- local style -->
     <link rel="stylesheet" href="style.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../../hightlight/styles/codepen-embed.min.css">
 </head>
 
 <body>
+    <div class="wrapper">
     <h1>Размер</h1>
-    <div class="element_size">
-        <input class="size" type="number" placeholder="ширина">
-        <span>×</span>
-        <input class="size" type="number" placeholder="высота">
+    <div class="after_before">
+        <h2>После</h2>
+        <h2>До</h2>
+
+        <div class="element_size">
+            <input class="size" type="number" placeholder="ширина">
+            <span>×</span>
+            <input class="size" type="number" placeholder="высота">
+        </div>
+
+        <div>
+            <input type="number" placeholder="ширина">
+            <span>×</span>
+            <input type="number" placeholder="высота">
+        </div>
     </div>
+
+<h2>HTML</h2>
+<pre><code class="language-html">&lt;div class=&quot;element_size&quot;&gt;
+    &lt;input class=&quot;size&quot; type=&quot;number&quot; placeholder=&quot;ширина&quot;&gt;
+    &lt;span&gt;&times;&lt;/span&gt;
+    &lt;input class=&quot;size&quot; type=&quot;number&quot; placeholder=&quot;высота&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>CSS</h2>
+<pre><code class="language-css">/* Убрать кнопки увеличения и уменьшения в input number */
+/* Chrome, Safari, Edge, Opera */
+input.size::-webkit-outer-spin-button,
+input.size::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input.size {
+    -moz-appearance: textfield;
+}
+
+input.size {
+    width: 60px;
+    padding: 4px;
+    text-align: center;
+}
+</code></pre>
+</div>
+
 </body>
-<script src="script.js"></script></html>
+
+<script src="script.js"></script>
+
+<!-- highlight -->
+<script src="../../hightlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</html>

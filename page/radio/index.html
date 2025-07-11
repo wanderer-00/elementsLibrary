@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>input radio</title>
+    <!-- global -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- local -->
     <link rel="stylesheet" href="style.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../../hightlight/styles/codepen-embed.min.css">
 </head>
 
 <body>
+    <div class="wrapper">
+    <h1>input radio</h1>
+    <div class="after_before">
+        <h2>После</h2>
+        <h2>До</h2>
 
-    <div class="checkbox_radio">
-
-        <div>
+        <div class="radio">
             <input type="radio" id="A1" name="A" checked>
             <label for="A1">radio 1</label>
 
@@ -23,6 +31,83 @@
             <input type="radio" id="A4" name="A">
             <label for="A4">radio 4</label>
         </div>
+
+        <div>
+            <input type="radio" name="B" id="B1" checked>
+            <label for="B1">radio 1</label>
+
+            <input type="radio" name="B" id="B2">
+            <label for="B2">radio 2</label>
+
+            <input type="radio" name="B" id="B3">
+            <label for="B3">radio 3</label>
+
+            <input type="radio" name="B" id="B4">
+            <label for="B4">radio 4</label>
+        </div>
     </div>
 
-</body></html>
+
+<h2>HTML</h2>
+<pre><code class="language-html">&lt;input type=&quot;radio&quot; id=&quot;A1&quot; name=&quot;A&quot; checked&gt;
+&lt;label for=&quot;A1&quot;&gt;radio 1&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;A2&quot; name=&quot;A&quot;&gt;
+&lt;label for=&quot;A2&quot;&gt;radio 2&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;A3&quot; name=&quot;A&quot;&gt;
+&lt;label for=&quot;A3&quot;&gt;radio 3&lt;/label&gt;
+
+&lt;input type=&quot;radio&quot; id=&quot;A4&quot; name=&quot;A&quot;&gt;
+&lt;label for=&quot;A4&quot;&gt;radio 4&lt;/label&gt;
+</code></pre>
+
+<h2>CSS</h2>
+<pre><code class="language-css">:root {
+    --radio-on: #0078D7;
+    --radio-off: gray;
+}
+
+/* запрет выделения текста */
+.radio label {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Стандартный синтаксис */
+}
+
+/* скрыть radio */
+.radio input[type="radio"] {display: none}
+
+/* перекраска активного radio */
+.radio input:checked + label {
+    color: var(--radio-on);
+    border-color: var(--radio-on);
+}
+
+/* позиционирование radio */
+.radio {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.radio label {
+    padding: 12px;
+    text-align: center;
+    place-content: center;
+    white-space: nowrap;
+    color: var(--radio-off);
+    border-radius: 4px;
+    border: 1px solid var(--radio-off);
+    cursor: pointer;
+}
+</code></pre>
+</div>
+
+</body>
+
+<!-- highlight -->
+<script src="../../hightlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</html>

@@ -3,15 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Count</title>
+    <!-- global -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <!-- local -->
     <link rel="stylesheet" href="style.css">
+    <!-- highlight -->
+    <link rel="stylesheet" href="../../hightlight/styles/codepen-embed.min.css">
 </head>
 
 <body>
-    <h1>Колличество</h1>
-    <p>Сменить alert неактивностью кнопок</p>
+    <div class="wrapper">
+        <h1>Колличество</h1>
+        <div class="after_before">
+            <div>После</div>
+            <div>До</div>
 
-    <button class="count" onclick="minus()">-</button>
-    <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
-    <button class="count" onclick="plus()">+</button>
+            <div>
+                <button class="count" onclick="minus()">-</button>
+                <input class="count" id="count" type="number" placeholder="кол-во" min="1" value="1">
+                <button class="count" onclick="plus()">+</button>
+            </div>
+
+            <div>
+                <input id="count" type="number" placeholder="кол-во" min="1" value="1">
+            </div>
+        </div>
+        
+<h2>HTML</h2>
+<pre><code class="language-html">&lt;button class=&quot;count&quot; onclick=&quot;minus()&quot;&gt;-&lt;/button&gt;
+&lt;input class=&quot;count&quot; id=&quot;count&quot; type=&quot;number&quot; placeholder=&quot;кол-во&quot; min=&quot;1&quot; value=&quot;1&quot;&gt;
+&lt;button class=&quot;count&quot; onclick=&quot;plus()&quot;&gt;+&lt;/button&gt;</code></pre>
+
+<h2>CSS</h2>
+<pre><code class="language-css">input.count::-webkit-outer-spin-button,
+input.count::-webkit-inner-spin-button {
+    /* удаление встроенных кнопок */
+    -webkit-appearance: none;
+}
+
+input.count {
+    width: 60px;
+    border: none;
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+button.count {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+    font-family: monospace;
+}</code></pre>
+
+    </div>
 </body>
-<script src="script.js"></script></html>
+
+<script src="script.js"></script>
+
+<!-- highlight -->
+<script src="../../hightlight/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</html>

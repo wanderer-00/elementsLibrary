@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+}
+
+.after_before {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+/*    border: 1px solid red;*/
+}
+
+.after_before > div {
+/*    border: 1px solid green;*/
+}
+
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
